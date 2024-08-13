@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ceaugust <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/04 14:19:09 by ceaugust          #+#    #+#             */
-/*   Updated: 2024/08/06 13:00:55 by ceaugust         ###   ########.fr       */
+/*   Created: 2024/08/06 18:33:45 by ceaugust          #+#    #+#             */
+/*   Updated: 2024/08/06 18:35:01 by ceaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,11 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 	return (dest);
 }
 /*int  main(void){

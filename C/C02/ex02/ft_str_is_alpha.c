@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ceaugust <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/04 15:18:53 by ceaugust          #+#    #+#             */
-/*   Updated: 2024/08/04 16:15:07 by ceaugust         ###   ########.fr       */
+/*   Created: 2024/08/06 18:37:39 by ceaugust          #+#    #+#             */
+/*   Updated: 2024/08/06 20:55:06 by ceaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ int	ft_str_is_alpha(char *str)
 	int	ver;
 
 	ver = 1;
-	i = 1;
+	i = 0;
 	while (str[i])
 	{
-		if (!(str[i] <= 122 && str[i] >= 97) || !(str[i] >= 65 && str[i] <= 90))
+		if (!(str[i] >= 65 && str[i] <= 90) && !(str[i] >= 97 && str[i] <= 122))
 		{
 			ver = 0;
 		}
-		str++;
+		i++;
 	}
 	return (ver);
 }

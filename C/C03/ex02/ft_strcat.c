@@ -1,35 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ceaugust <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ceaugust <ceaugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/05 13:48:03 by ceaugust          #+#    #+#             */
-/*   Updated: 2024/08/06 18:43:22 by ceaugust         ###   ########.fr       */
+/*   Created: 2024/08/07 17:27:23 by ceaugust          #+#    #+#             */
+/*   Updated: 2024/08/08 16:07:01 by ceaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h> 
 
-char	*ft_strupcase(char *str)
+char	*ft_strcat(char *dest, char *src)
 	{
 	int	i;
+	int	j;
 
+	j = 0;
 	i = 0;
-	while (str[i])
+	while (dest[j])
 	{
-		if (str[i] >= 97 && str[i] <= 122)
-		{
-			str[i] -= 32;
-		}
+		j++;
+	}
+	while (src[i])
+	{
+		dest[j] = src[i];
+		j++;
 		i++;
 	}
-	return (str);
+	dest[j] = '\0';
+	return (dest);
 }
-/*int main (void) {
-	char buffer[] =  "upper";
-	ft_strupcase(buffer); 
-	printf("%s", buffer);
+/*int main (void){
+	char str1[] = "black hole sun ";
+	char str2[] = "won't you come";
+	ft_strcat(str1, str2);
+	printf("%s ", str1);
 	return 0;
 }*/

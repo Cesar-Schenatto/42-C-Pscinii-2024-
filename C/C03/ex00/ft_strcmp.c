@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ceaugust <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/05 16:45:51 by ceaugust          #+#    #+#             */
-/*   Updated: 2024/08/06 18:45:43 by ceaugust         ###   ########.fr       */
+/*   Created: 2024/08/06 14:01:33 by ceaugust          #+#    #+#             */
+/*   Updated: 2024/08/12 14:54:57 by ceaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strlowcase(char *str)
-	{
+int	ft_strcmp(char *s1, char *s2)
+{
 	int	i;
+	int	j;
 
 	i = 0;
-	while (str[i])
+	j = 0;
+	while (s1[i] || s2[j])
 	{
-		if (str[i] >= 65 && str[i] <= 90)
+		if (s1[i] != s2[j])
 		{
-			str[i] += 32;
+			return (s1[i] - s2[i]);
 		}
 		i++;
+		j++;
 	}
-	return (str);
+	return (0);
 }
-/*int main (void) {
-	
-	char buffer[] = "UPPER";
-	ft_strlowcase(buffer);
-	printf("%s", buffer);
+/*int main (void){
+	char str1[] = "aaa";
+	char str2[] = "aaW";
+
+	printf("%i ", ft_strcmp(str1, str2));
 	return 0;
+
 }*/

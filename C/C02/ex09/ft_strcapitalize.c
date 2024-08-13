@@ -6,7 +6,7 @@
 /*   By: ceaugust <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 16:56:18 by ceaugust          #+#    #+#             */
-/*   Updated: 2024/08/06 13:47:17 by ceaugust         ###   ########.fr       */
+/*   Updated: 2024/08/06 13:52:03 by ceaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	*ft_strlowercase(char *str)
 }
 /*int main(void)
 {
-	char buffer[] = "BaIiza, e dorgas. /m w; backstreet dogs.";
+	char buffer[] = "Bulbasaur, e charmander. /m w; backstreet dogs.";
 	ft_strcapitalize(buffer);
 	printf("%s ", buffer);
 	return 0;

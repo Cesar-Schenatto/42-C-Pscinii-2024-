@@ -6,7 +6,7 @@
 /*   By: ceaugust <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 16:46:40 by ceaugust          #+#    #+#             */
-/*   Updated: 2024/08/06 13:06:18 by ceaugust         ###   ########.fr       */
+/*   Updated: 2024/08/06 18:39:46 by ceaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ int	ft_str_is_lowercase(char *str)
 
 	i = 0;
 	var = 0;
-	while (str[i])
+	while (*str)
 	{
-		if (!(str[i] >= 97 && str[i] <= 122))
+		if (!(*str >= 'a' && *str <= 'z'))
 		{
-			var = 1;
+			return (0);
 		}
 		str++;
 	}
-	return (var);
+	return (1);
 }
 /*int main (void) {
 	char buffer[] = "lOwe";
