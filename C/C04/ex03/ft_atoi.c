@@ -16,17 +16,32 @@ int	ft_atoi(char *str)
 {
 	int i;
 	int flag;
+    int ret;
 
 	i = 0;
 	flag = 1;
-	while (str[i])
+    ret = 0;
+
+	while (str[i] == ' ')
 	{
-		flag = (str[i] = '-') 
-		i++	
+        i++;
 	}
+    while (str[i] == '-' || str[i] == '+') 
+    {
+        if (str[i] == '-')
+        flag *= -1;
+        i++;
+    }
+    while (str[i] <= '9' && str[i] >= '0')
+    {
+
+        ret = ret * 10 + (str[i] - 48);
+        i++;
+    } 
+    return (ret * flag);
 }
 int main (void) {
-	char buffer[] = "--+-+-+-+++-+--5123nya"
+	char buffer[] = "--+-+-+-+++-+-+5123nya";
 	printf("%d ",ft_atoi(buffer));
 	return 0;
 
