@@ -6,16 +6,16 @@
 /*   By: ceaugust <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 18:44:48 by ceaugust          #+#    #+#             */
-/*   Updated: 2024/08/08 18:48:49 by ceaugust         ###   ########.fr       */
+/*   Updated: 2024/08/15 16:42:30 by ceaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h> 
 
-void ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (str[i])
 	{
@@ -23,10 +23,9 @@ void ft_putstr(char *str)
 		i++;
 	}
 }
-
-int main (void) {
+/*int main (void) {
 
 	char buffer[] = "Holy Diver, you've been down too long in the midnight sea";
 	ft_putstr(buffer);
 	return 0;
-}
+}*/

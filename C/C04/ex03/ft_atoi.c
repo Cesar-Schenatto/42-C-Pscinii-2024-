@@ -6,7 +6,7 @@
 /*   By: ceaugust <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 16:45:31 by ceaugust          #+#    #+#             */
-/*   Updated: 2024/08/13 18:33:18 by ceaugust         ###   ########.fr       */
+/*   Updated: 2024/08/15 16:39:12 by ceaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,33 @@
 
 int	ft_atoi(char *str)
 {
-	int i;
-	int flag;
-    int ret;
+	int	i;
+	int	flag;
+	int	ret;
 
 	i = 0;
 	flag = 1;
-    ret = 0;
-
+	ret = 0;
 	while (str[i] == ' ')
 	{
-        i++;
+		i++;
 	}
-    while (str[i] == '-' || str[i] == '+') 
-    {
-        if (str[i] == '-')
-        flag *= -1;
-        i++;
-    }
-    while (str[i] <= '9' && str[i] >= '0')
-    {
-
-        ret = ret * 10 + (str[i] - 48);
-        i++;
-    } 
-    return (ret * flag);
+	while (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			flag *= -1;
+		i++;
+	}
+	while (str[i] <= '9' && str[i] >= '0')
+	{
+		ret = ret * 10 + (str[i] - 48);
+		i++;
+	}
+	return (ret * flag);
 }
-int main (void) {
+/*int main (void) {
 	char buffer[] = "--+-+-+-+++-+-+5123nya";
 	printf("%d ",ft_atoi(buffer));
 	return 0;
 
-}
+}*/
