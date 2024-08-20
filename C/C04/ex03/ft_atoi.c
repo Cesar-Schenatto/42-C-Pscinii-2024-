@@ -6,7 +6,7 @@
 /*   By: ceaugust <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 16:45:31 by ceaugust          #+#    #+#             */
-/*   Updated: 2024/08/15 16:39:12 by ceaugust         ###   ########.fr       */
+/*   Updated: 2024/08/19 16:28:45 by ceaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(char *str)
 	i = 0;
 	flag = 1;
 	ret = 0;
-	while (str[i] == ' ')
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
 	{
 		i++;
 	}
@@ -39,7 +39,7 @@ int	ft_atoi(char *str)
 	return (ret * flag);
 }
 /*int main (void) {
-	char buffer[] = "--+-+-+-+++-+-+5123nya";
+	char buffer[] = "--+-+-+-+++-+--5123nya";
 	printf("%d ",ft_atoi(buffer));
 	return 0;
 

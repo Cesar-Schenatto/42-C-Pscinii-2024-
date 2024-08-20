@@ -6,7 +6,7 @@
 /*   By: ceaugust <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 16:23:25 by ceaugust          #+#    #+#             */
-/*   Updated: 2024/08/15 19:39:38 by ceaugust         ###   ########.fr       */
+/*   Updated: 2024/08/19 16:42:36 by ceaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	rec(int nbr, char *base, int size)
 	{
 		n = nbr;
 	}
-	if (n > (unsigned int)size)
+	if (n >= (unsigned int)size)
 	{
 		rec(n / size, base, size);
 	}
@@ -37,13 +37,19 @@ void	rec(int nbr, char *base, int size)
 int	ver(char *base)
 	{
 	int	i;
+	int	j;
 
 	i = 0;
 	while (base[i])
 	{
-		if (base[i] == base[i + 1] || base[i] == '-' || base[i] == '+')
-		{
+		if (base[i] == '-' || base[i] == '+')
 			return (0);
+		j = i + 1;
+		while (base[j])
+		{
+			if (base[i] == base[j])
+				return (0);
+			j++;
 		}
 		i++;
 	}
