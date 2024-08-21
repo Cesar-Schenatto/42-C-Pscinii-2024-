@@ -6,7 +6,7 @@
 /*   By: ceaugust <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 19:12:05 by ceaugust          #+#    #+#             */
-/*   Updated: 2024/08/21 18:29:50 by ceaugust         ###   ########.fr       */
+/*   Updated: 2024/08/21 19:07:00 by ceaugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void ft_putstr(char *str)
 		write(1, str, 1);
 		str++;
 	}
+	write(1, "\n", 1);
 }
 
 void ft_swap(int *a, int *b)
@@ -49,15 +50,22 @@ int main (int ac, char **av)
 	int i;
 	int j;
 	int an[ac];
+	int antiBO;
+	
 	
 	i = 1;
+	antiBO = 1;
+	while(antiBO < ac)
+	{
+		an[antiBO] = antiBO;
+		antiBO++;
+	}
 	while(i < ac )
 	{
-		an[i] = i;
 		j = i;
 		while (j < ac )
 		{
-			if (ft_strcmp(av[an[i]], av[an[j]]) > 0)
+			if (ft_strcmp(av[i], av[j]) > 0)
 				ft_swap(&an[i], &an[j]);
 			j++;
 		}
